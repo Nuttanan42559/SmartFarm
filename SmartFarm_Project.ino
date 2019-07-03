@@ -60,35 +60,36 @@ void loop()
 { 
     Blynk.run();
     tempcontrol();
+    light();
 }
 
 void NPK(int func) {  
   if(func == 1){
     Serial.print("Function 1");
-//    digitalWrite(N, HIGH);
-//    delay(8000);
-//    digitalWrite(P, HIGH);
-//    delay(5000);
-//    digitalWrite(K, HIGH);
-//    delay(5000);
+    digitalWrite(N, HIGH);
+    delay(8000);
+    digitalWrite(P, HIGH);
+    delay(5000);
+    digitalWrite(K, HIGH);
+    delay(5000);
   }
   else if(func == 2){
     Serial.print("Function 2");
-//    digitalWrite(N, HIGH);
-//    delay(5000);
-//    digitalWrite(P, HIGH);
-//    delay(5000);
-//    digitalWrite(K, HIGH);
-//    delay(5000);
+    digitalWrite(N, HIGH);
+    delay(5000);
+    digitalWrite(P, HIGH);
+    delay(5000);
+    digitalWrite(K, HIGH);
+    delay(5000);
   }
   else if(func == 3){
     Serial.print("Function 3");
-//    digitalWrite(N, HIGH);
-//    delay(5000);
-//    digitalWrite(P, HIGH);
-//    delay(7000);
-//    digitalWrite(K, HIGH);
-//    delay(7000);
+    digitalWrite(N, HIGH);
+    delay(5000);
+    digitalWrite(P, HIGH);
+    delay(7000);
+    digitalWrite(K, HIGH);
+    delay(7000);
   }
     
 }
@@ -108,14 +109,14 @@ int tempcontrol() {
     Blynk.virtualWrite(V2, humidity);               
     Blynk.virtualWrite(V3, temp);
     if(temp > 30){
-//      digitalWrite(pential, HIGH);
-//      digitalWrite(pentialfan, HIGH);
-//      digitalWrite(fan, HIGH);
+      digitalWrite(pential, HIGH);
+      digitalWrite(pentialfan, HIGH);
+      digitalWrite(fan, HIGH);
     }
     else if(temp < 30){
-//      digitalWrite(pential, LOW);
-//      digitalWrite(pentialfan, LOW);
-//      digitalWrite(fan, LOW);
+      digitalWrite(pential, LOW);
+      digitalWrite(pentialfan, LOW);
+      digitalWrite(fan, LOW);
     }
   
 }

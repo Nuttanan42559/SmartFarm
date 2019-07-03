@@ -59,8 +59,10 @@ void setup()
 void loop()
 { 
     Blynk.run();
+    gettime();
     tempcontrol();
     light();
+    
 }
 
 void NPK(int func) {  
@@ -103,6 +105,13 @@ void light() {
     }
 }
 
+int gettime() {
+    timeClient.update();
+    int hr = timeClient.getHours();
+    int mi = timeClient.getMinutes();
+
+    return hr;
+}
 int tempcontrol() {
     int humidity = dht.readHumidity();            
     int temp = dht.readTemperature();
